@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+
+ float e_fonte, e_resistor_r1, e_resistor_r2, s_corrente, s_tensão_r1, s_tensão_r2, variavel_resit_equivalente;
+
+printf("entre com o valor da fonte:");
+scanf("%F",&e_fonte);
+
+printf("entre com o valor resistor r1:");
+scanf("%F",&e_resistor_r1);
+
+printf("entre com o valor resistor r2:");
+scanf("%F",&e_resistor_r2);
+
+
+variavel_resit_equivalente= e_resistor_r1 + e_resistor_r2;
+
+if(variavel_resit_equivalente !=0){
+  s_corrente=e_fonte/ variavel_resit_equivalente;
+ printf("a corrente total: %f \n ",s_corrente);
+}else{
+  printf("erro logico.\n");
+}
+
+  return 0;
+}
