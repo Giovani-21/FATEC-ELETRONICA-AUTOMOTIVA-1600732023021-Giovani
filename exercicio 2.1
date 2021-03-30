@@ -2,7 +2,7 @@
 
 int main(void) {
 
-float e_fonte, e_resistor_r1, e_resistor_r2, s_corrente, s_tensão_r1, s_tensão_r2, variavel_resit_equivalente;
+ float e_fonte, e_resistor_r1, e_resistor_r2, s_corrente, s_tensão_r1, s_tensão_r2, variavel_resit_equivalente;
 
 printf("entre com o valor da fonte:");
 scanf("%F",&e_fonte);
@@ -18,7 +18,15 @@ variavel_resit_equivalente= e_resistor_r1 + e_resistor_r2;
 
 if(variavel_resit_equivalente !=0){
   s_corrente=e_fonte/ variavel_resit_equivalente;
- printf("a corrente total: %f \n ",s_corrente);
+  printf("a corrente total: %f[A] \n ",s_corrente);
+  
+  s_tensão_r1 =  s_corrente *e_resistor_r1;
+  printf( "a tensão total r1: %f[V] \n", s_tensão_r1);
+
+  s_tensão_r2 =  s_corrente *e_resistor_r1;
+  printf( "a tensão total r1: %f[V] \n", s_tensão_r2);
+
+
 }else{
   printf("erro logico.\n");
 }
